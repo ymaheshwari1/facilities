@@ -335,7 +335,7 @@ const actions: ActionTree<UtilState, RootState> = {
       logger.error(error)
     }
     commit(types.UTIL_SHOPIFY_SHOP_UPDATED, shopifyShops)
-    return shopifyShops[0].shopifyShopId
+    return shopifyShops[0]?.shopifyShopId
   },
 
   clearUtilState({ commit }) {
